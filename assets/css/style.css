@@ -1,0 +1,807 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #516271;
+}
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+  color: #092032;
+}
+a {
+  color: #092032;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.logo {
+  width: 80px !important;
+}
+
+img {
+  width: 100%;
+}
+.bg-cover {
+  background-position: center !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+/* Contenu du slide : Texte */
+
+.title,
+.title1 {
+  position: relative; /* Nécessaire pour positionner ::before */
+  display: inline-block; /* Garde la largeur du texte */
+}
+
+.title::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #fff;
+  position: absolute; /* Position absolue pour séparer du texte */
+  left: -50px; /* Décale le trait vers la gauche */
+  transform: translateX(-180px); /* Ajuste encore plus le décalage */
+}
+/* =========================================== */
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro h6 {
+  font-weight: 400;
+  color: rgb(1, 49, 131);
+}
+.intro p {
+  max-width: 500px;
+  margin: auto;
+}
+
+/********************* NAVBAR **********************/
+.top-nav {
+  background-color: rgb(1, 49, 131);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: rgb(1, 49, 131);
+}
+.activ {
+  color: rgb(1, 49, 131) !important;
+}
+
+.top-nav p {
+  margin-bottom: 0;
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+}
+.top-nav i,
+.top-nav span {
+  vertical-align: middle;
+}
+
+.social-links a {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 20px;
+  border-radius: 100%;
+}
+.social-links a:hover {
+  background-color: #fff;
+  color: rgb(1, 49, 131);
+}
+
+.navbar {
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 26px;
+  color: #092032;
+}
+
+.navbar-brand span {
+  color: rgb(1, 49, 131);
+}
+
+.btn {
+  padding: 9px 24px;
+  font-weight: 500;
+}
+.btn-brand {
+  background-color: rgb(1, 49, 131);
+  color: #fff;
+  border-color: rgb(1, 49, 131);
+}
+.btn-brand:hover {
+  color: #000;
+  background-color: rgba(0, 97, 191);
+}
+
+/*********************** SLIDE ************************/
+
+/* Définition des backgrounds */
+.slide1 {
+  background: linear-gradient(rgba(9, 32, 50, 0.4), rgba(9, 32, 50, 0.4)),
+    url("./../img/img1.png");
+}
+
+.slide2 {
+  background: linear-gradient(rgba(9, 32, 50, 0.4), rgba(9, 32, 50, 0.4)),
+    url("./../img/img2.png");
+}
+
+.slide3 {
+  background: linear-gradient(rgba(9, 32, 50, 0.4), rgba(9, 32, 50, 0.4)),
+    url("./../img/img3.png");
+}
+
+/*  Styles pour les petits et moyens écrans (par défaut, pas de style spécial) */
+.slide {
+  background-size: auto !important;
+  background-position: top center !important;
+  background-attachment: scroll !important;
+  height: auto !important;
+  display: block; /* Désactive le centrage du contenu */
+}
+
+/*  Appliquer le style seulement aux grands écrans (plus de 1024px) */
+@media (min-width: 1025px) {
+  .slide {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 85vh !important;
+    background-attachment: fixed !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .slide-page {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 60vh !important;
+    background-attachment: fixed !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Conteneur du texte */
+.slide-content {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste le centrage */
+  width: 90%; /* Ajustement automatique pour éviter le dépassement */
+  color: white; /* Texte visible sur l'image */
+  z-index: 2; /* S'assure que le texte reste au-dessus de l'image */
+}
+
+/* ✅ Ajustements pour les écrans moyens et petits */
+@media (max-width: 1024px) {
+  .slide {
+    background-size: auto !important;
+    height: auto !important;
+    background-position: top center !important;
+    background-attachment: scroll !important;
+  }
+  .slide-content {
+    position: absolute;
+    top: 10%; /* Place le texte plus haut pour éviter les débordements */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw !important;
+  }
+}
+
+/* Petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+  .slide {
+    background-size: cover !important;
+    height: auto !important;
+    background-position: top center !important;
+  }
+  .slide-content {
+    top: 5%; /* Évite que le texte se retrouve trop bas */
+    font-size: 14px; /* Réduit la taille du texte pour s'adapter */
+  }
+  .slide-text h1 {
+    font-size: 14px;
+  }
+  .slide-text h4 {
+    font-size: 12px;
+  }
+  /* Affichage slide sur les ecrans de petite taille */
+  .s-small {
+    height: 100px !important;
+    width: 100vw !important;
+    background: linear-gradient(
+      rgb(0, 97, 191, 0.8),
+      rgb(0, 97, 191, 0.8)
+    ) !important;
+  }
+  .slide-text {
+    background: none !important;
+  }
+}
+
+/* Div contenant le text pour le slide*/
+/*  */
+.slide-text {
+  background: linear-gradient(rgb(0, 97, 191, 0.8), rgb(0, 97, 191, 0.8));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Prend toute la largeur */
+
+  /* Centrer verticalement sur la page */
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+
+  min-height: 40vh; /* Hauteur réduite (ajuster selon besoin) */
+  padding: 2rem 0; /* Petit espace autour du texte */
+  text-align: center; /* Centre le texte */
+}
+
+.slide-text .display-4,
+.slide-text p {
+  color: #fff;
+}
+
+.slide-text .display-4 {
+  font-weight: 700;
+}
+
+.logo-slide {
+  position: absolute; /* Permet de le placer précisément */
+  right: 20px; /* Distance du bord droit */
+  bottom: 20px; /* Distance du bord bas */
+  width: 100px; /* Ajuste la taille de l’image (modifiable) */
+  height: auto; /* Garde les proportions */
+}
+
+/******************************* OWL CAROUSEL ****************************/
+.owl-prev,
+.owl-next {
+  top: 50%;
+  display: grid !important;
+  place-items: center !important;
+  background-color: rgb(255, 255, 255, 0.3) !important;
+  margin-top: -30px !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 12px;
+  border-radius: 100px !important;
+}
+.owl-prev {
+  left: 0;
+}
+.owl-next {
+  right: 0;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  background-color: rgb(1, 49, 131) !important;
+}
+/********************* A PROPOS **************/
+.title1::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgba(0, 97, 191);
+  position: absolute; /* Position absolue pour séparer du texte */
+  top: -10px;
+}
+.title2::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgb(119, 183, 247);
+  position: absolute;
+  top: 85px;
+}
+
+.vertical-line {
+  border-right: 1px solid #000; /* Bordure verticale */
+  height: 100%; /* Prend toute la hauteur du parent */
+}
+
+/****************** HISTORIQUE ****************/
+.info-box {
+  display: flex;
+}
+.info-boxs {
+  display: flex;
+}
+.mission .info-box img,
+.about .info-box img {
+  width: 100px;
+  height: 70px;
+}
+
+.hist {
+  margin-top: 150px !important;
+}
+.info-box img {
+  width: 150px;
+  margin-right: 15px;
+}
+
+/****************** MILESTONE ****************/
+#milestone {
+  background: linear-gradient(rgb(0, 97, 191, 0.8), rgb(253, 125, 0, 0.8));
+}
+#milestone .display-4,
+#milestone p {
+  color: #fff;
+}
+#milestone .display-4 {
+  font-weight: 700;
+}
+/****************** FONDATEUR ****************/
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+/****************** EQUIPE *******************/
+.equipe1 .vertical-line {
+  border-right: 1px solid rgb(0, 97, 191);
+  height: 100%;
+}
+.equipe1 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #fff;
+  background: linear-gradient(rgba(9, 32, 50, 0.8), rgba(9, 32, 50, 0.8)),
+    url(./../img/img13.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 300px;
+}
+.equipe1-img {
+  display: block;
+  transform: translate(2%, -50%);
+}
+
+/* Equipe 1 */
+@media (max-width: 768px) {
+  .equipe1-img {
+    display: block;
+    transform: translate(1%, -100%);
+    height: 100px;
+    width: 100px;
+  }
+  .equipe1 .vertical-line{
+    all:unset;
+  }
+  .equipe1{
+    height: 500px;
+  }
+}
+/* ============ */
+.equipe2 {
+  height: 500px;
+}
+.equipe2 .card-body,
+.equipe3 .card-body {
+  background-color: rgb(1, 49, 131, 0.9);
+}
+.equipe2 .card-title,
+.equipe3 .card-title {
+  color: #fff;
+}
+.ceo-name {
+  color: rgb(0, 97, 191);
+}
+.equipe3 img {
+  height: 200px;
+}
+
+
+/****************** SERVICES ****************/
+#services {
+  padding: 32px;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+#services img {
+  width: unset;
+}
+.service-img {
+  width: auto;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.service .logo {
+  width: auto !important;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: auto;
+}
+.service .c-body {
+  background-color: rgb(0, 97, 191) !important;
+}
+
+/************************ OBJECTIFS  *******************/
+.objectif .info-boxs img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+.objectif h3 {
+  color: rgb(253, 125, 0) !important;
+}
+
+/*********************** PROJECT ************************/
+.project,
+.team-member {
+  position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: rgb(1, 49, 131) !important;
+}
+
+.project .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 32, 50, 0),
+    rgba(9, 32, 50, 0.4)
+  );
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  bottom: 0;
+  left: 0;
+}
+.project .content,
+.team-member .content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 12px;
+}
+
+.project h1,
+.team-member h4,
+.team-member p,
+.project h6 {
+  color: #fff;
+}
+
+.project h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel-projet h5::before {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background-color: rgb(253, 125, 0);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.carousel-projet img {
+  height: 500px;
+}
+.project a {
+  color: rgb(253, 125, 0);
+}
+
+/***************** TEAM ****************/
+.team-member {
+  text-align: center;
+}
+
+.team-member .img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member .overlay {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(177, 177, 177, 0.75);
+  opacity: 0;
+}
+
+/* service */
+.service .overlay {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 113, 136, 0.53);
+  opacity: 0;
+}
+
+.service .team-member .social-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+/* ====== */
+.team-member .social-links {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.team-member .content {
+  bottom: 18%;
+}
+
+.team-member .overlay {
+  opacity: 1;
+  top: 0;
+}
+
+.team-member h5 {
+  margin-top: 10px;
+}
+
+/****************** REVIEWS *******************/
+.review {
+  /* max-width: 900px; */
+  margin: auto;
+  text-align: center;
+}
+.review img {
+  width: 100px !important;
+  border-radius: 1000px !important;
+  margin: auto;
+}
+
+.review h6 {
+  color: rgb(1, 49, 131);
+}
+
+.review p {
+  font-size: 12px;
+}
+
+/********************** BLOG Historique ************************/
+.blog-post,
+.historique {
+  position: relative;
+}
+
+.blog-post .tag,
+.historique .tag {
+  padding: 4px 12px;
+  background-color: rgb(253, 125, 0);
+  color: #fff;
+  border-radius: 100px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+
+.blog-post h4 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.blog-post small {
+  font-size: 14px;
+  color: rgb(253, 125, 0);
+}
+
+.blog-post img {
+  margin-bottom: 12px;
+}
+.blog h5 {
+  color: rgb(1, 49, 131);
+  background-color: rgb(0, 97, 191);
+  width: 150px;
+  text-align: center;
+}
+/***************** FOOTER ******************/
+footer {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(rgba(0, 97, 191, 0.8), rgba(148, 75, 1, 0.8)),
+    url(./../img/img13.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer .navbar-brand {
+  color: #fff;
+}
+
+.footer-top {
+  margin-bottom: 40px;
+}
+.footer-bottom {
+  border-top: 1px solid rgb(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+footer .social-links {
+  margin-left: 5px;
+  margin: 5px;
+}
+
+/*********** CONTACT Form ********/
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgb(1, 49, 131);
+}
+
+/*********************** Modal ********************************************************/
+.modal-img {
+  background-image: url(./../img/img12.png); /* Image par défaut (grands écrans) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 📱 Pour les écrans moyens et petits (moins de 768px) */
+@media (max-width: 768px) {
+  .modal-img {
+    background-image: url(./../img/img13.png) !important; /* Image différente */
+    background-size: contain !important; /* Évite de couper l’image */
+  }
+}
+
+/* INFOGRAPHIE */
+.arrow-box {
+  position: relative;
+  background: rgb(0, 97, 191);
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.arrow-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: rgb(0, 97, 191);
+  transform: translateY(-50%);
+}
+
+.arrow-box i {
+  margin-right: 10px;
+}
+
+/* ========== */
+.section-box {
+  background: #f0f8ff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.number-box {
+  background: rgb(1, 49, 131);
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+.number-boxs {
+  background: rgb(119, 183, 247);
+  color: white;
+  padding: 15px;
+}
+
+.icon-box {
+  background: rgb(253, 125, 0);
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.text-box {
+  padding: 8px;
+  font-size: 14px;
+}
+.chart-icon i {
+  background-color: rgb(253, 125, 0);
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+/* Carte */
+#map {
+  height: 500px;
+  width: 100%;
+}
+.custom-label {
+  background-color: #f57c00;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+.custom-label.blue {
+  background-color: #3498db;
+}
+.lien-ecovillage {
+  font-style: italic;
+  font-size: 14px;
+  color: #f57c00;
+}
+/* caroussel acceui/actualite */
+#carouselExampleCaptions {
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime les espaces internes */
+}
+.carousel-indicators [data-bs-target] {
+  width: 50px; /* Largeur des indicateurs */
+  height: 5px; /* Épaisseur des traits */
+  background-color: #555; /* Couleur des indicateurs */
+  border-radius: 3px; /* Coins arrondis */
+}
+#carouselExampleCaptions h5, #carouselExampleCaptions h3{
+  color: #cecece;;
+}
