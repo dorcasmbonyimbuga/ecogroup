@@ -797,11 +797,8 @@ footer .social-links {
   padding: 0; /* Supprime les espaces internes */
 }
 .carousel-indicators [data-bs-target] {
-  width: 50px; /* Largeur des indicateurs */
-  height: 5px; /* Épaisseur des traits */
-  background-color: #555; /* Couleur des indicateurs */
-  border-radius: 3px; /* Coins arrondis */
+  background-color: rgb(1, 49, 131); /* Couleur des indicateurs */
 }
 #carouselExampleCaptions h5, #carouselExampleCaptions h3{
-  color: #cecece;;
+  color: #fff;;
 }
