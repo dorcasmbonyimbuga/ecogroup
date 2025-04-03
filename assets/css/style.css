@@ -405,10 +405,10 @@ img {
     height: 100px;
     width: 100px;
   }
-  .equipe1 .vertical-line{
-    all:unset;
+  .equipe1 .vertical-line {
+    all: unset;
   }
-  .equipe1{
+  .equipe1 {
     height: 500px;
   }
 }
@@ -430,7 +430,6 @@ img {
 .equipe3 img {
   height: 200px;
 }
-
 
 /****************** SERVICES ****************/
 #services {
@@ -641,10 +640,12 @@ img {
   margin-bottom: 12px;
 }
 .blog h5 {
-  color: rgb(1, 49, 131);
+  color: #000;
   background-color: rgb(0, 97, 191);
-  width: 150px;
+  width: 200px;
+  height: 30px;
   text-align: center;
+  border-radius: 20px;
 }
 /***************** FOOTER ******************/
 footer {
@@ -658,6 +659,7 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
 
 footer .navbar-brand {
   color: #fff;
@@ -799,6 +801,10 @@ footer .social-links {
 .carousel-indicators [data-bs-target] {
   background-color: rgb(1, 49, 131); /* Couleur des indicateurs */
 }
-#carouselExampleCaptions h5, #carouselExampleCaptions h3{
-  color: #fff;;
+#carouselExampleCaptions h5,
+#carouselExampleCaptions h3 {
+  color: #fff;
+}
+.img-projet img {
+  object-fit: cover;
 }
